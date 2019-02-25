@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/leftTitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="标题标题"
+        android:textColor="@color/colorTextBlack_333333"
+        android:textSize="14sp" />
+
+    <View
+        style="@style/LineHorizontal_C"
+        android:layout_margin="0dp" />
+</LinearLayout>

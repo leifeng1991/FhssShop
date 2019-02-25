@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPageBackground"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTextGray_EEEEEE"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:src="@mipmap/ic_integral" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="我的积分"
+            android:textColor="@color/colorTextBlack_333333"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/mIntegralTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="0"
+            android:textColor="@color/colorTextBlack_333333"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <com.fhss.shop.weight.ShapeButton
+            android:id="@+id/mUpgradeButton"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="30dp"
+            app:fb_defaultColor="@color/colorTheme"
+            app:fb_radius="10dp"
+            app:fb_text="充值"
+            app:fb_textColor="@android:color/white"
+            app:fb_textSize="18sp" />
+
+        <com.fhss.shop.weight.ShapeButton
+            android:id="@+id/mCreditsButton"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            app:fb_borderColor="@color/colorTextGray_999999"
+            app:fb_borderWidth="1px"
+            app:fb_defaultColor="@color/colorTextGray_CCCCCC"
+            app:fb_radius="10dp"
+            app:fb_text="积分兑换"
+            app:fb_textColor="@color/colorTextBlack_333333"
+            app:fb_textSize="18sp" />
+
+        <TextView
+            android:id="@+id/mExplainTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="积分兑换规则"
+            android:textColor="@color/colorTheme" />
+    </LinearLayout>
+</LinearLayout>

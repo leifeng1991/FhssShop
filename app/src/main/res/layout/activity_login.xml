@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPageBackground"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <include layout="@layout/layout_title_bar_1" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/mUserButton"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:src="@mipmap/ic_defalut_avatar"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="33dp" />
+
+        <TextView
+            android:id="@+id/mUserNameTextView"
+            style="@style/LeftTextView"
+            android:layout_width="70dp"
+            android:text="账号"
+            app:layout_constraintBottom_toBottomOf="@+id/mAccountEditText"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/mAccountEditText"
+            app:layout_constraintTop_toTopOf="@+id/mAccountEditText" />
+
+        <EditText
+            android:id="@+id/mAccountEditText"
+            style="@style/LoginEt"
+            android:layout_marginTop="60dp"
+            android:background="@null"
+            android:hint="请输入手机号"
+            android:inputType="phone"
+            android:maxLength="11"
+            app:layout_constraintLeft_toRightOf="@+id/mUserNameTextView"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mUserButton" />
+
+        <View
+            android:id="@+id/line_1"
+            style="@style/LineHorizontal_C"
+            android:layout_margin="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/mAccountEditText" />
+
+        <TextView
+            android:id="@+id/mYzmTextView"
+            style="@style/LeftTextView"
+            android:layout_width="70dp"
+            android:text="验证码"
+            app:layout_constraintBottom_toBottomOf="@+id/mYzmEditText"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/mYzmEditText"
+            app:layout_constraintTop_toTopOf="@+id/mYzmEditText" />
+
+        <EditText
+            android:id="@+id/mYzmEditText"
+            style="@style/LoginEt"
+            android:hint="请输入验证码"
+            android:inputType="numberPassword"
+            android:maxLength="6"
+            app:layout_constraintLeft_toRightOf="@+id/mUserNameTextView"
+            app:layout_constraintRight_toLeftOf="@+id/mGetYzmTextView"
+            app:layout_constraintRight_toRightOf="@+id/mGetYzmTextView"
+            app:layout_constraintTop_toBottomOf="@+id/line_1" />
+
+        <com.fhss.shop.weight.ShapeButton
+            android:id="@+id/mGetYzmTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:gravity="bottom"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:text="短信验证码登录"
+            android:textSize="12sp"
+            app:fb_defaultColor="@color/colorPageBackground"
+            app:fb_textColor="#226bbb"
+            app:layout_constraintLeft_toRightOf="@+id/mYzmEditText"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/mYzmEditText" />
+
+        <View
+            android:id="@+id/line_2"
+            style="@style/LineHorizontal_C"
+            android:layout_margin="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/mYzmEditText" />
+
+        <TextView
+            android:id="@+id/mForgetPasswordTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="忘记密码"
+            android:textColor="@color/colorTextGray_999999"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@+id/line_2" />
+
+        <TextView
+            android:id="@+id/mRegisterTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="新用户注册"
+            android:textColor="@color/colorTheme"
+            android:textSize="12sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line_2" />
+
+        <com.fhss.shop.weight.ShapeButton
+            android:id="@+id/mLoginButton"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginRight="30dp"
+            app:fb_defaultColor="@color/colorTheme"
+            app:fb_radius="10dp"
+            app:fb_text="登录"
+            app:fb_textColor="@android:color/white"
+            app:fb_textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/mForgetPasswordTextView" />
+
+        <View
+            android:id="@+id/mLine"
+            style="@style/LineHorizontal_C"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="60dp"
+            app:layout_constraintTop_toBottomOf="@+id/mLoginButton" />
+
+        <LinearLayout
+            android:id="@+id/mWeChatLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:gravity="center_vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mLine">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="19dp"
+                android:text="其他等方式:"
+                android:textColor="@color/colorTextGray_999999"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_wechat" />
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+
+</RelativeLayout>

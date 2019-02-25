@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPageBackground"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <include layout="@layout/layout_title_bar_1" />
+
+    <RelativeLayout
+        android:id="@+id/mComboChoiceLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/mTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="套餐选择"
+            android:textColor="@color/colorTextBlack_333333"
+            android:textSize="18sp" />
+
+        <com.zrq.base.MyRecyclerView
+            android:id="@+id/mComboChoiceList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mTitleTextView" />
+
+        <com.fhss.shop.weight.ShapeButton
+            android:id="@+id/mSubmitButton"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"
+            app:fb_defaultColor="@color/colorTheme"
+            app:fb_radius="8dp"
+            app:fb_text="提交" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/mSuccessLayout"
+        layout="@layout/activity_success"
+        android:visibility="gone" />
+</LinearLayout>

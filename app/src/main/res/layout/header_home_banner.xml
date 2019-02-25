@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false">
+
+    <com.youth.banner.Banner
+        android:id="@+id/mImageViewLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipChildren="false"
+        app:layout_constraintDimensionRatio="375:125"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/mSearch"
+        layout="@layout/layout_search"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/mImageViewLayout" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mMenuList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="7dp"
+        app:layout_constraintTop_toBottomOf="@+id/mSearch" />
+
+    <ImageView
+        android:id="@+id/mAdsImageView"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mMenuList" />
+
+    <View
+        android:id="@+id/mLine"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#eeeeee"
+        app:layout_constraintTop_toBottomOf="@+id/mAdsImageView" />
+
+    <RelativeLayout
+        android:id="@+id/mBrandTitleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/mLine">
+
+        <View
+            android:id="@+id/mLeftLine"
+            android:layout_width="3dp"
+            android:layout_height="23dp"
+            android:background="@color/colorTheme" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/mLeftLine"
+            android:text="超级品牌日"
+            android:textColor="@color/colorTextBlack_333333"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/mBrandMoreTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawableRight="@mipmap/ic_right_gray_arrow"
+            android:drawablePadding="5dp"
+            android:paddingRight="10dp"
+            android:text="更多" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/mLine_1"
+        style="@style/LineHorizontal_C"
+        app:layout_constraintTop_toBottomOf="@+id/mBrandTitleLayout" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mBrandList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/mLine_1" />
+
+    <View
+        android:id="@+id/mLine_2"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#eeeeee"
+        app:layout_constraintTop_toBottomOf="@+id/mBrandList" />
+
+    <RelativeLayout
+        android:id="@+id/mNewGoodsTitleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/mLine_2">
+
+        <View
+            android:id="@+id/mLeftLine_1"
+            android:layout_width="3dp"
+            android:layout_height="23dp"
+            android:background="@color/colorTheme" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/mLeftLine_1"
+            android:text="新品上市"
+            android:textColor="@color/colorTextBlack_333333"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/mNewGoodsMoreTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawableRight="@mipmap/ic_right_gray_arrow"
+            android:drawablePadding="5dp"
+            android:paddingRight="10dp"
+            android:text="更多" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/mNewGoodsListLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/mNewGoodsTitleLayout">
+
+        <com.fhss.shop.weight.WrapContentHeightViewPager
+            android:id="@+id/mNewGoodsViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/mNewGoodsDotsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp">
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/mLine_3"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#eeeeee"
+        app:layout_constraintTop_toBottomOf="@+id/mNewGoodsListLayout" />
+
+    <RelativeLayout
+        android:id="@+id/mHotGoodsTitleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/mLine_3">
+
+        <View
+            android:id="@+id/mLeftLine_2"
+            android:layout_width="3dp"
+            android:layout_height="23dp"
+            android:background="@color/colorTheme" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/mLeftLine_2"
+            android:text="热销商品"
+            android:textColor="@color/colorTextBlack_333333"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/mHotGoodsMoreTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawableRight="@mipmap/ic_right_gray_arrow"
+            android:drawablePadding="5dp"
+            android:paddingRight="10dp"
+            android:text="更多" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/mHotGoodsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/mHotGoodsTitleLayout">
+
+        <com.fhss.shop.weight.WrapContentHeightViewPager
+            android:id="@+id/mHotViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+
+        <LinearLayout
+            android:id="@+id/mHotGoodsDotsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp">
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:gravity="center"
+        android:text="— 精品推荐 —"
+        android:textColor="#a4a4a4"
+        android:textSize="15sp"
+        android:background="#eeeeee"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mHotGoodsLayout" />
+</android.support.constraint.ConstraintLayout>

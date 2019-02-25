@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/mNewBankTextView"
+        style="@style/PersonInfoLeftArrowTextView"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@mipmap/ic_add_bank"
+        android:drawablePadding="5dp"
+        android:text="添加银行" />
+</LinearLayout>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fhss.shop">
+
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCOUNT_MANAGER" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <!-- 往SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 从SDCard读取数据权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name=".base.FhssApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PersonInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.IntegralActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ComBoChoiceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.NewAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MyOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.BankActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.NewBankActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AboutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AvatarActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ConfirmOrderActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.GoodsDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CommentCommodityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CommentDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CollectCenterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PurchaseHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MessageCenterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SearchGoodsListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.IntegralExchangeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ImageViewPageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LogisticsInformationActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.CompleteInformationActivity"
+            android:screenOrientation="portrait"/>
+        <!-- wechat -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:screenOrientation="portrait"/>
+
+        <service
+            android:name=".account.AuthenticatiorService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+
+        <service
+            android:name=".account.SyncService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/sync_adapter" />
+        </service>
+
+        <provider
+            android:name=".account.AccountProvider"
+            android:authorities="com.fhss.shop.account.provide"
+            android:exported="false"
+            android:syncable="true" />
+        <receiver android:name=".broadcast.NotificationClickReceiver" />
+
+    </application>
+
+</manifest>

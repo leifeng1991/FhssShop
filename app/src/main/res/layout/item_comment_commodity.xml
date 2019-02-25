@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPageBackground"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/mCommentUserImageView"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="10dp" />
+
+        <TextView
+            android:id="@+id/mUserNameTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="...名字"
+            android:textColor="@color/colorTextGray_999999"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/mCommentUserImageView"
+            app:layout_constraintLeft_toRightOf="@+id/mCommentUserImageView"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/mCommentUserImageView" />
+
+        <TextView
+            android:id="@+id/mCommentTimeTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="2010.10.10"
+            android:textColor="@color/colorTextGray_999999"
+            android:textSize="9sp"
+            app:layout_constraintTop_toBottomOf="@+id/mUserNameTextView" />
+
+        <TextView
+            android:id="@+id/mGoodsColorTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="颜色:白色"
+            android:textColor="@color/colorTextGray_999999"
+            android:textSize="9sp"
+            app:layout_constraintLeft_toRightOf="@+id/mCommentTimeTextView"
+            app:layout_constraintTop_toBottomOf="@+id/mUserNameTextView" />
+
+        <TextView
+            android:id="@+id/mGoodsContentTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="评论内评论内容评论内容评论内容评论内容评论内容评论内容容"
+            android:textColor="@color/colorTextBlack_333333"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@+id/mCommentTimeTextView" />
+
+        <ImageView
+            android:id="@+id/mImageView1"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mGoodsContentTextView" />
+
+        <ImageView
+            android:id="@+id/mImageView2"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mGoodsContentTextView" />
+
+        <ImageView
+            android:id="@+id/mImageView3"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mGoodsContentTextView" />
+
+        <com.fhss.shop.weight.ShapeButton
+            android:id="@+id/mCommentNumberTextView"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:paddingBottom="6dp"
+            app:fb_borderColor="@color/colorTextGray_999999"
+            app:fb_borderWidth="1px"
+            app:fb_defaultColor="#dddddd"
+            app:fb_iconPaddingRight="5dp"
+            app:fb_iconPaddingTop="5dp"
+            app:fb_iconResource="@mipmap/ic_gary_comment"
+            app:fb_radius="10dp"
+            app:fb_text="1"
+            app:fb_textColor="@color/colorTextGray_999999"
+            app:fb_textSize="9sp"
+            app:layout_constraintRight_toLeftOf="@+id/mLikeNumberTextView"
+            app:layout_constraintTop_toTopOf="@+id/mLikeNumberTextView" />
+
+        <com.fhss.shop.weight.ShapeButton
+            android:id="@+id/mLikeNumberTextView"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:paddingBottom="6dp"
+            app:fb_borderColor="@color/colorTextGray_999999"
+            app:fb_borderWidth="1px"
+            app:fb_defaultColor="#dddddd"
+            app:fb_iconPaddingRight="3dp"
+            app:fb_iconPosition="left"
+            app:fb_iconResource="@mipmap/ic_like"
+            app:fb_radius="10dp"
+            app:fb_text="1"
+            app:fb_textColor="@color/colorTextGray_999999"
+            app:fb_textSize="9sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mImageView1" />
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/colorWhite"/>
+</LinearLayout>

@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:zhy="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/mNestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/goodsDetailBottom"
+        android:background="@color/colorTextGray_EEEEEE">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.youth.banner.Banner
+                android:id="@+id/mImageViewLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/mMarketPriceTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="市场价:100000"
+                android:textColor="@color/colorTextGray_999999"
+                android:textSize="18sp"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/mVipPriceTextView"
+                app:layout_constraintTop_toBottomOf="@id/mImageViewLayout" />
+
+            <TextView
+                android:id="@+id/mVipPriceTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="会员价:100000"
+                android:textColor="@color/colorTextGray_999999"
+                android:textSize="18sp"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/mMarketPriceTextView"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mImageViewLayout" />
+
+            <TextView
+                android:id="@+id/mMessageTitleTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:paddingRight="15dp"
+                android:text="ssssssssssssssssssssssssssssssssss"
+                android:textColor="@color/colorTextBlack_333333"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@+id/mMarketPriceTextView" />
+
+            <TextView
+                android:id="@+id/mIntegralTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
+                android:text="(会员可获得200积分)"
+                android:textColor="#ed1010"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@+id/mMessageTitleTextView" />
+
+            <TextView
+                android:id="@+id/mLocationTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="产品所在地:河南郑州"
+                android:textColor="@color/colorTextGray_999999"
+                android:textSize="13sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mIntegralTextView" />
+
+            <View
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/colorPageBackground"
+                app:layout_constraintTop_toBottomOf="@+id/mLocationTextView" />
+
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:id="@+id/mMaterialFlowLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="15dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="15dp"
+                app:layout_constraintTop_toBottomOf="@+id/line1"
+                zhy:max_select="-1" />
+
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:id="@+id/mTypeFlowLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:paddingLeft="5dp"
+                android:paddingEnd="15dp"
+                android:paddingRight="15dp"
+                android:visibility="gone"
+                android:paddingBottom="15dp"
+                app:layout_constraintTop_toBottomOf="@+id/mMaterialFlowLayout"
+                zhy:max_select="-1" />
+
+            <TextView
+                android:id="@+id/mNumberTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="购买数量"
+                android:textColor="@color/colorTextGray_999999"
+                android:textSize="13sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mTypeFlowLayout" />
+
+            <ImageView
+                android:id="@+id/mSubImageView"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/ic_sub"
+                app:layout_constraintBottom_toBottomOf="@+id/mNumberTitleTextView"
+                app:layout_constraintLeft_toRightOf="@+id/mNumberTitleTextView"
+                app:layout_constraintTop_toTopOf="@+id/mNumberTitleTextView" />
+
+            <TextView
+                android:id="@+id/mGoodsNumberTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/colorTextGray_CCCCCC"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:text="1"
+                android:textColor="@color/colorTextBlack_333333"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/mSubImageView"
+                app:layout_constraintLeft_toRightOf="@+id/mSubImageView"
+                app:layout_constraintTop_toTopOf="@+id/mSubImageView" />
+
+            <ImageView
+                android:id="@+id/mAddImageView"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:src="@mipmap/ic_add"
+                app:layout_constraintBottom_toBottomOf="@+id/mNumberTitleTextView"
+                app:layout_constraintLeft_toRightOf="@+id/mGoodsNumberTextView"
+                app:layout_constraintTop_toTopOf="@+id/mNumberTitleTextView" />
+
+            <TextView
+                android:id="@+id/mParameterTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="参数"
+                android:visibility="gone"
+                android:textColor="@color/colorTextGray_999999"
+                android:textSize="13sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mNumberTitleTextView" />
+
+            <TextView
+                android:id="@+id/mParameterTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginLeft="3dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="15dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="10dp"
+                android:text="更多参数..."
+                android:textColor="@color/colorTextBlack_333333"
+                android:textSize="13sp"
+                app:layout_constraintLeft_toRightOf="@+id/mParameterTitleTextView"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mNumberTitleTextView"
+                android:visibility="gone"/>
+
+            <View
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/colorPageBackground"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/mParameterTitleTextView" />
+
+            <TextView
+                android:id="@+id/mCommentNumberTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="19dp"
+                android:text="商品评价(100)"
+                android:textColor="@color/colorTextBlack_333333"
+                android:textSize="13sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line2" />
+
+            <TextView
+                android:id="@+id/mCommentMoreTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:drawableEnd="@mipmap/ic_right_arrow"
+                android:drawableRight="@mipmap/ic_right_arrow"
+                android:drawablePadding="5dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="19dp"
+                android:text="查看全部"
+                android:textColor="@color/colorTheme"
+                android:textSize="13sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line2" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/mCommentUserImageView"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="15dp"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mCommentNumberTextView"
+                app:riv_corner_radius="13dp" />
+
+            <TextView
+                android:id="@+id/mUserNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="...名字"
+                android:textColor="@color/colorTextGray_999999"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/mCommentUserImageView"
+                app:layout_constraintLeft_toRightOf="@+id/mCommentUserImageView"
+                app:layout_constraintTop_toTopOf="@+id/mCommentUserImageView" />
+
+            <TextView
+                android:id="@+id/mCommentContentTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:drawablePadding="5dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:paddingStart="15dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="评论内评论内容评论内容评论内容评论内容容"
+                android:textColor="@color/colorTextBlack_333333"
+                android:textSize="13sp"
+                app:layout_constraintTop_toBottomOf="@id/mUserNameTextView" />
+
+            <View
+                android:id="@+id/line3"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/colorPageBackground"
+                app:layout_constraintTop_toBottomOf="@+id/mCommentContentTextView" />
+
+            <android.support.constraint.Group
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="line3,mCommentContentTextView,mUserNameTextView,mCommentUserImageView,mCommentMoreTextView,mCommentNumberTextView" />
+
+            <TextView
+                android:id="@+id/mRelatedProductsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="19dp"
+                android:text="相关商品"
+                android:textColor="@color/colorTextBlack_333333"
+                android:textSize="13sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line3"
+                android:visibility="gone"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/mRelatedProductsList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/mRelatedProductsTextView" />
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:background="@color/colorPageBackground"
+                app:layout_constraintTop_toBottomOf="@+id/mRelatedProductsList" />
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="1px"
+                android:layout_marginRight="15dp"
+                android:background="@color/colorTextGray_999999"
+                app:layout_constraintBottom_toBottomOf="@+id/mDetailTitleTextView"
+                app:layout_constraintRight_toLeftOf="@+id/mDetailTitleTextView"
+                app:layout_constraintTop_toTopOf="@+id/mDetailTitleTextView" />
+
+            <TextView
+                android:id="@+id/mDetailTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="详情"
+                android:textColor="@color/colorTextGray_999999"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/line"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mRelatedProductsList"
+                app:layout_constraintTop_toTopOf="@+id/line" />
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="1px"
+                android:layout_marginLeft="15dp"
+                android:background="@color/colorTextGray_999999"
+                app:layout_constraintBottom_toBottomOf="@+id/mDetailTitleTextView"
+                app:layout_constraintLeft_toRightOf="@+id/mDetailTitleTextView"
+                app:layout_constraintTop_toTopOf="@+id/mDetailTitleTextView" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/mImagesDetailsList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/mDetailTitleTextView" />
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/goodsDetailBottom"
+        layout="@layout/layout_goods_detail_bottom" />
+
+    <include layout="@layout/toolbar_layout_1" />
+</RelativeLayout>

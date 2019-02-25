@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.zrq:spanbuilder-1.0.5">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/spanbuilder-1.0.5.aar/08a0b7a82289728bf14a34d1db99f014/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/spanbuilder-1.0.5.aar/08a0b7a82289728bf14a34d1db99f014/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.zrq/spanbuilder/1.0.5/58facba5e90bce23c418901fe6800db01b3c82a7/spanbuilder-1.0.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

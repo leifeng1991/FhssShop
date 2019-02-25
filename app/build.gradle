@@ -1,0 +1,78 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    signingConfigs {
+        releaseConfig {
+            keyAlias 'zhaolin'
+            keyPassword '123456'
+            storeFile file("zhaolin.keystore.jks")
+            storePassword '123456'
+        }
+    }
+
+    compileSdkVersion versions.compileSdkVersion
+    defaultConfig {
+        applicationId "com.fhss.shop"
+        minSdkVersion versions.minSdkVersion
+        targetSdkVersion versions.targetSdkVersion
+        versionCode versions.versionCode
+        versionName versions.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            signingConfig signingConfigs.releaseConfig
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug{
+            signingConfig signingConfigs.releaseConfig
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    // 基础库
+    implementation project(':base')
+    // 圆形和圆角图片
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    // 状态栏
+    implementation 'com.readystatesoftware.systembartint:systembartint:1.0.4'
+    // tab栏
+    implementation 'com.github.hackware1993:MagicIndicator:1.5.0'
+    // 选择图片
+    implementation 'com.github.lovetuzitong:MultiImageSelector:1.2'
+    // 流式布局
+    implementation 'com.hyman:flowlayout-lib:1.1.2'
+    // 轮播图
+    implementation 'com.youth.banner:banner:1.4.10'
+    implementation "org.jetbrains.kotlin:kotlin-reflect:1.2.71"
+    // 微信
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:5.1.6'
+    // span
+    implementation 'com.zrq:spanbuilder:1.0.5'
+    // 图片压缩Luban
+    implementation 'top.zibin:Luban:1.1.8'
+}
+
+

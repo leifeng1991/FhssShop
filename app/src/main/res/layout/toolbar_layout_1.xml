@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_mtl_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/leftBackImage"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:src="@mipmap/ic_solid_left_back" />
+
+        <ImageView
+            android:id="@+id/leftBackImages"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:alpha="0"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:src="@mipmap/ic_solid_left_back" />
+
+        <ImageView
+            android:id="@+id/mShareImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:paddingStart="8dp"
+            android:paddingLeft="8dp"
+            android:paddingEnd="20dp"
+            android:paddingRight="20dp"
+            android:src="@mipmap/ic_solid_more" />
+
+        <ImageView
+            android:id="@+id/mShareImageViews"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:alpha="0"
+            android:paddingStart="8dp"
+            android:paddingLeft="8dp"
+            android:paddingEnd="20dp"
+            android:paddingRight="20dp"
+            android:src="@mipmap/ic_solid_more" />
+
+        <ImageView
+            android:id="@+id/mCollectImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toStartOf="@id/mShareImageView"
+            android:layout_toLeftOf="@id/mShareImageView"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingEnd="8dp"
+            android:paddingRight="8dp"
+            android:src="@mipmap/ic_solid_shop_cart" />
+
+        <ImageView
+            android:id="@+id/mCollectImageViews"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toStartOf="@id/mShareImageViews"
+            android:layout_toLeftOf="@id/mShareImageViews"
+            android:alpha="0"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingEnd="8dp"
+            android:paddingRight="8dp"
+            android:src="@mipmap/ic_solid_shop_cart" />
+    </RelativeLayout>
+</RelativeLayout>

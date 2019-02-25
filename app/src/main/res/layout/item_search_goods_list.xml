@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp">
+
+    <Space
+        android:id="@+id/mLeftSpace"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/shape_goods_bg"
+        android:orientation="vertical"
+        android:paddingBottom="15dp">
+
+        <ImageView
+            android:id="@+id/mImageViewLayout"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerHorizontal="true"
+            tools:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/mGoodsDescribeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mImageViewLayout"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="及埃及急急急急急急你"
+            android:textColor="@color/colorTextBlack_333333"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/mIntegralTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mGoodsDescribeTextView"
+            android:layout_marginTop="3dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="(会员可获得200积分)"
+            android:textColor="#ed1010"
+            android:textSize="9sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mIntegralTextView"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/mPricesTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:paddingLeft="10dp"
+                android:text="零售价:￥1996.00"
+                android:textColor="@color/colorTextGray_999999"
+                android:textSize="9sp" />
+
+            <TextView
+                android:id="@+id/mPriceTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:maxLines="2"
+                android:paddingRight="10dp"
+                android:text="会员价:￥2300.00"
+                android:textColor="@color/colorPrice"
+                android:textSize="9sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <Space
+        android:id="@+id/mRightSpace"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content" />
+</LinearLayout>

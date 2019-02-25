@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp">
+
+    <TextView
+        android:id="@+id/mTimeTextView"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:textColor="@color/colorTextBlack_333333"
+        android:textSize="15sp"
+        app:layout_constraintTop_toTopOf="@+id/mStateTextView" />
+
+    <LinearLayout
+        android:id="@+id/mImageViewLayout"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/mStateTextView"
+        app:layout_constraintLeft_toRightOf="@+id/mTimeTextView"
+        app:layout_constraintTop_toTopOf="@+id/mStateTextView">
+
+        <ImageView
+            android:id="@+id/mImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:src="@mipmap/ic_dian" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/mLine"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/colorTextGray_999999"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/mImageViewLayout"
+        app:layout_constraintRight_toRightOf="@+id/mImageViewLayout"
+        app:layout_constraintTop_toBottomOf="@+id/mImageViewLayout" />
+
+    <TextView
+        android:id="@+id/mStateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/mImageViewLayout"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/mContentTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@+id/mImageViewLayout"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mStateTextView" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#eeeeee">
+
+    <Space
+        android:id="@+id/mLeftSpace"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:paddingBottom="15dp">
+
+        <ImageView
+            android:id="@+id/mImageViewLayout"
+            android:layout_width="match_parent"
+            android:layout_height="180dp" />
+
+        <TextView
+            android:id="@+id/mGoodsDescribeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mImageViewLayout"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="及埃及急急急急急急你"
+            android:textColor="@color/colorTextBlack_333333"
+            android:textSize="13sp" />
+
+        <View
+            android:id="@+id/mLine"
+            style="@style/LineHorizontal_C"
+            android:layout_below="@+id/mGoodsDescribeTextView"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp" />
+
+        <TextView
+            android:id="@+id/mPriceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mLine"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="100"
+            android:textColor="@color/colorTheme"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/mPricesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mPriceTextView"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="100"
+            android:textColor="#d4d4d4"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/mShopCartImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/ic_add_shop_cart" />
+    </RelativeLayout>
+
+    <Space
+        android:id="@+id/mRightSpace"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+</LinearLayout>

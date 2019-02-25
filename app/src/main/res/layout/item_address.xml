@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPageBackground"
+    android:orientation="horizontal"
+    android:paddingBottom="5dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTextGray_EEEEEE"
+        android:padding="10dp">
+
+        <com.fhss.shop.weight.ShapeButton
+            android:id="@+id/mUserButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:fb_textColor="@color/colorTextBlack_333333"
+            app:fb_defaultColor="#cc9900"
+            app:fb_radius="25dp"
+            android:gravity="center"
+            app:fb_text="雷锋"
+            android:layout_marginRight="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:riv_corner_radius="25dp" />
+
+        <TextView
+            android:id="@+id/mUserNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="张胜男"
+            android:textColor="@color/colorTextBlack_333333"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toRightOf="@+id/mUserButton" />
+
+        <TextView
+            android:id="@+id/mPhoneTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="123456"
+            android:textColor="@color/colorTextGray_999999"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/mUserNameTextView"
+            app:layout_constraintLeft_toRightOf="@+id/mUserNameTextView" />
+
+        <TextView
+            android:id="@+id/mSelectedTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:background="@color/colorTextGray_CCCCCC"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="已选"
+            android:visibility="invisible"
+            android:textColor="@color/colorTheme"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@+id/mUserNameTextView"
+            app:layout_constraintLeft_toRightOf="@+id/mUserButton"
+            app:layout_constraintTop_toBottomOf="@+id/mUserNameTextView" />
+
+        <TextView
+            android:id="@+id/mDetailAddressTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="5dp"
+            android:textColor="@color/colorTextBlack_333333"
+            android:textSize="12sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBaseline_toBaselineOf="@+id/mSelectedTextView"
+            app:layout_constraintLeft_toLeftOf="@+id/mUserNameTextView"
+            app:layout_constraintRight_toLeftOf="@+id/line1"
+            app:layout_constraintTop_toBottomOf="@+id/mUserNameTextView" />
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="1px"
+            android:layout_height="25dp"
+            android:background="@color/colorTextGray_999999"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/mDetailAddressTextView"
+            app:layout_constraintRight_toLeftOf="@+id/mEditTextView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/mEditTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="编辑"
+            android:textColor="@color/colorTextGray_999999"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

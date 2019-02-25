@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">富和双盛</string>
+
+    <string-array name="menuTitles">
+        <item>商品分类</item>
+        <item>购物车</item>
+        <item>积分兑换</item>
+        <item>优惠活动</item>
+        <item>收藏中心</item>
+        <item>订单中心</item>
+        <item>个人中心</item>
+        <item>消息中心</item>
+    </string-array>
+</resources>

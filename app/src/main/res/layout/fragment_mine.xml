@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPageBackground"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_bar" />
+
+    <RelativeLayout
+        android:id="@+id/mUserInfoRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorTextGray_EEEEEE">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/mUserButton"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="10dp"
+            android:src="@mipmap/ic_launcher"
+            app:riv_corner_radius="5dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/mUserButton"
+            android:layout_toRightOf="@+id/mUserButton"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/mUserNameTextView"
+                style="@style/PersonInfoLeftTextView"
+                android:layout_width="wrap_content"
+                android:padding="0dp" />
+
+            <TextView
+                android:id="@+id/mPromoCodeTextView"
+                style="@style/PersonInfoLeftTextView"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="5dp"
+                android:padding="0dp"
+                android:textColor="@color/colorTextGray_999999" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/mUserSexTextView"
+            style="@style/PersonInfoRightArrowTextView"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/mMyIntegralTextView"
+        style="@style/PersonInfoLeftArrowTextView"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@mipmap/ic_integral"
+        android:drawablePadding="5dp"
+        android:text="我的积分" />
+
+    <TextView
+        android:id="@+id/mMyCollectTextView"
+        style="@style/PersonInfoLeftArrowTextView"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@mipmap/ic_collect"
+        android:drawablePadding="5dp"
+        android:text="我的收藏" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/mMessageCenterTextView"
+            style="@style/PersonInfoLeftArrowTextView"
+
+            android:drawableLeft="@mipmap/ic_message_center"
+            android:drawablePadding="5dp"
+            android:text="消息中心" />
+
+        <com.fhss.shop.weight.ShapeButton
+            android:id="@+id/mReadPointsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="25dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            app:fb_defaultColor="#ff0000"
+            app:fb_radius="8dp"
+            app:fb_text="NEW"
+            android:visibility="invisible"
+            app:fb_textSize="9sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/mPurchaseHistoryTextView"
+        style="@style/PersonInfoLeftArrowTextView"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@mipmap/ic_record"
+        android:drawablePadding="5dp"
+        android:text="我的订单" />
+
+    <TextView
+        android:id="@+id/mDeliveryAddressTextView"
+        style="@style/PersonInfoLeftArrowTextView"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@mipmap/ic_my_address"
+        android:drawablePadding="5dp"
+        android:text="收货地址" />
+
+    <TextView
+        android:id="@+id/mBankCardTextView"
+        style="@style/PersonInfoLeftArrowTextView"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@mipmap/ic_my_bank"
+        android:drawablePadding="5dp"
+        android:text="银行卡" />
+
+    <TextView
+        android:id="@+id/mSettingTextView"
+        style="@style/PersonInfoLeftArrowTextView"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@mipmap/ic_setting"
+        android:drawablePadding="5dp"
+        android:text="设置" />
+
+</LinearLayout>

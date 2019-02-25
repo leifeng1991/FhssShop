@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="load_data_width">100dp</dimen>
+    <dimen name="toolbar_height">44dp</dimen>
+</resources>

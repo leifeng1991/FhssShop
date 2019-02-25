@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<account-authenticator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accountPreferences="@xml/account_preferences"
+    android:accountType="com.fhss.shop"
+    android:customTokens="false"
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/app_name"
+    android:smallIcon="@mipmap/ic_launcher" />
+
+    <!-- accountType:账号类型--><!--icon:设置-同步-添加 账号类型的icon--><!--smallIcon:小icon-->
+
+    <!--label:设置-同步-添加 账号类型的名称--><!--accountPreferences:在设置中展示的一些偏好--><!--customTokens:authenticator是否要自己处理auth token的存储和获取权限-->
+

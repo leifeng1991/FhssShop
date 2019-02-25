@@ -1,0 +1,42 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.2.70'
+    repositories {
+        jcenter()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        maven { url "https://jitpack.io" }
+        mavenCentral()
+        google()
+        maven { url 'http://developer.huawei.com/repo/' }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext.versions = [
+        compileSdkVersion: 27,
+
+        minSdkVersion    : 16,
+        targetSdkVersion : 26,// 不能生成26及以上，否则推送不显示（已解决）
+
+        versionCode      : 1,
+        versionName      : '1.0.0',
+
+        supportLibary    : '27.1.1'// 高于此版本design就会有那个滑动bug，例如26.0.0
+]

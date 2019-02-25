@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mBottomLayout"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentBottom="true"
+    android:background="@color/colorPageBackground"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+
+    <TextView
+        android:id="@+id/mStoreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@mipmap/ic_store"
+        android:drawablePadding="3dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="店铺"
+        android:textColor="@color/colorTextGray_999999"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/mCustomerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@mipmap/ic_service"
+        android:drawablePadding="3dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="客服"
+        android:textColor="@color/colorTextGray_999999"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/mCollectTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@mipmap/ic_cell_normal"
+        android:drawablePadding="3dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="收藏"
+        android:textColor="@color/colorTextGray_999999"
+        android:textSize="10sp" />
+
+    <com.fhss.shop.weight.ShapeButton
+        android:id="@+id/mAddShopCartButton"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:text="加入购物车"
+        app:fb_borderColor="@color/colorTheme"
+        app:fb_borderWidth="1px"
+        app:fb_defaultColor="@color/colorWhite"
+        app:fb_radiusBottomLeft="20dp"
+        app:fb_radiusTopLeft="20dp"
+        app:fb_textColor="@color/colorTheme"
+        app:fb_textSize="15sp">
+
+    </com.fhss.shop.weight.ShapeButton>
+
+    <com.fhss.shop.weight.ShapeButton
+        android:id="@+id/mBuyNowButton"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="15dp"
+        android:layout_weight="1"
+        android:text="立即购买"
+        app:fb_borderColor="@color/colorTheme"
+        app:fb_borderWidth="1px"
+        app:fb_defaultColor="@color/colorTheme"
+        app:fb_radiusBottomRight="20dp"
+        app:fb_radiusTopRight="20dp"
+        app:fb_textColor="@color/colorWhite"
+        app:fb_textSize="15sp">
+
+    </com.fhss.shop.weight.ShapeButton>
+
+</LinearLayout>

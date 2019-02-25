@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTextGray_EEEEEE"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_search_title_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <com.fhss.shop.weight.ShapeButton
+                android:id="@+id/mPriceButton"
+                android:layout_width="72dp"
+                android:layout_height="25dp"
+                app:fb_defaultColor="@color/colorWhite"
+                app:fb_radius="3dp"
+                app:fb_text="价格"
+                app:fb_textColor="@color/colorTheme"
+                app:fb_textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <com.fhss.shop.weight.ShapeButton
+                android:id="@+id/mSalesButton"
+                android:layout_width="72dp"
+                android:layout_height="25dp"
+                app:fb_defaultColor="@color/colorWhite"
+                app:fb_radius="3dp"
+                app:fb_text="销量"
+                app:fb_textColor="@color/colorTextBlack_333333"
+                app:fb_textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.zrq.base.MyRecyclerView
+        android:id="@+id/mGoodsList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

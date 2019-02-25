@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="富和双盛" />
+    <PreferenceScreen
+        android:key="key1"
+        android:summary="PreferenceScreen_summary"
+        android:title="PreferenceScreen_title">
+        <intent
+            android:action="key1.ACTION"
+            android:targetClass="key1.class"
+            android:targetPackage="key1.package" />
+    </PreferenceScreen>
+
+</PreferenceScreen>

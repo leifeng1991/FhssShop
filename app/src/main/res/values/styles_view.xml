@@ -1,0 +1,95 @@
+<resources>
+
+    <style name="LineVertical">
+        <item name="android:layout_width">1px</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="LineVertical_ED" parent="LineVertical">
+        <item name="android:background">#ededed</item>
+    </style>
+
+    <style name="LineHorizontal_C">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">#cccccc</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+    </style>
+
+    <style name="PersonInfoLeftTextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:textColor">#333333</item>
+        <item name="android:background">#eeeeee</item>
+        <item name="android:textSize">15sp</item>
+        <item name="layout_constraintLeft_toLeftOf">parent</item>
+    </style>
+
+    <style name="PersonInfoLeftArrowTextView" parent="PersonInfoLeftTextView">
+        <item name="android:drawableRight">@mipmap/ic_gray_right_arrow</item>
+    </style>
+
+    <style name="ConfirmOrderTextView" parent="PersonInfoLeftTextView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:background">#ffffff</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="RightEt" parent="PersonInfoLeftTextView">
+        <item name="android:textColorHint">#999999</item>
+    </style>
+
+    <style name="PersonInfoRightTextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:gravity">right</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:textColor">#999999</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="PersonInfoRightArrowTextView" parent="PersonInfoRightTextView">
+        <item name="android:drawableRight">@mipmap/ic_gray_right_arrow</item>
+    </style>
+
+    <style name="LeftTextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#999999</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="HLine">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">#cccccc</item>
+    </style>
+
+    <style name="VLine">
+        <item name="android:layout_width">1px</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">#333333</item>
+    </style>
+
+    <style name="LoginEt">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:background">@null</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#333333</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColorHint">#999999</item>
+    </style>
+</resources>
